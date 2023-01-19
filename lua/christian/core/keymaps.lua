@@ -17,7 +17,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- delete current selection without adding to registry
-keymap.set("v", "D", '"_d"')
+keymap.set("v", "D", '"_d')
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')

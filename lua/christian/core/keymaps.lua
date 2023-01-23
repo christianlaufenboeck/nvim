@@ -57,3 +57,6 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 
 -- list available help tags
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+-- run eslint autofix
+keymap.set("n", "<leader>esfix", ":!eslint_d % --fix")

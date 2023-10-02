@@ -3,12 +3,16 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- center cursor and move screen 1/2 page up or down
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "<C-d>", "<C-d>zz")
+
+-- constantly move 10 lines up or down
+keymap.set("n", "<C-n>", "10kzz")
+keymap.set("n", "<C-m>", "10jzz")
 
 -- easily move selected lines up and down
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- remap escape key
 keymap.set("i", "jk", "<ESC>")
@@ -60,3 +64,5 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -- run eslint autofix
 keymap.set("n", "<leader>esfix", ":!eslint_d % --fix")
+
+keymap.set("n", "<leader>hlr", ":%s/\\<<C-r><C-w>\\>//g<Left><Left>", { noremap = true, silent = true })

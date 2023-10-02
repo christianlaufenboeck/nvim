@@ -27,7 +27,8 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim")
-	use("bluz71/vim-nightfly-guicolors")
+	-- use("bluz71/vim-nightfly-guicolors")
+	use("folke/tokyonight.nvim")
 
 	use("christoomey/vim-tmux-navigator")
 
@@ -60,7 +61,27 @@ return packer.startup(function(use)
 
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		config = function()
+			require("lspsaga").setup({
+				move_in_saga = { prev = "<C-k>", next = "<C-j>" },
+				definition = {
+					edit = "<CR>",
+					vsplit = "<C-c>v",
+					split = "<C-c>i",
+					tabe = "<C-c>t",
+					quit = "q",
+					close = "<Esc>",
+				},
+				symbol_in_winbar = {
+					enable = false,
+				},
+			})
+		end,
+		requires = { { "nvim-tree/nvim-web-devicons" } },
+	})
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 
@@ -82,6 +103,9 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim")
+
+	-- harpoon
+	use("ThePrimeagen/harpoon")
 
 	if packer_bootstrap then
 		require("packer").sync()

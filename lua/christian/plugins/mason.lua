@@ -20,7 +20,6 @@ mason_lspconfig.setup({
 		"tsserver",
 		"html",
 		"cssls",
-		"sumneko_lua",
 	},
 	automatic_installation = true,
 })

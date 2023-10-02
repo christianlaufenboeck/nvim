@@ -114,12 +114,18 @@ _G.packer_plugins = {
     path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lspsaga.nvim"] = {
+    config = { "\27LJ\2\nè\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\21symbol_in_winbar\1\0\1\venable\1\15definition\1\0\6\nsplit\v<C-c>i\tedit\t<CR>\vvsplit\v<C-c>v\tquit\6q\nclose\n<Esc>\ttabe\v<C-c>t\17move_in_saga\1\0\0\1\0\2\tnext\n<C-j>\tprev\n<C-k>\nsetup\flspsaga\frequire\0" },
     loaded = true,
     path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
@@ -206,6 +212,11 @@ _G.packer_plugins = {
     path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["typescript.nvim"] = {
     loaded = true,
     path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/typescript.nvim",
@@ -221,11 +232,6 @@ _G.packer_plugins = {
     path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
   },
-  ["vim-nightfly-guicolors"] = {
-    loaded = true,
-    path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
-    url = "https://github.com/bluz71/vim-nightfly-guicolors"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/christianlaufenbock/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -239,6 +245,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: lspsaga.nvim
+time([[Config for lspsaga.nvim]], true)
+try_loadstring("\27LJ\2\nè\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\21symbol_in_winbar\1\0\1\venable\1\15definition\1\0\6\nsplit\v<C-c>i\tedit\t<CR>\vvsplit\v<C-c>v\tquit\6q\nclose\n<Esc>\ttabe\v<C-c>t\17move_in_saga\1\0\0\1\0\2\tnext\n<C-j>\tprev\n<C-k>\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
+time([[Config for lspsaga.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
